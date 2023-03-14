@@ -50,8 +50,6 @@ jobs:
 
           bash app.sh
 
-          mkdir arm && mv *.dmg arm
-
       - name: push
         run: |
 
