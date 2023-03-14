@@ -2,7 +2,7 @@ name: Build App
 on: 
   push:
       branches:
-        - master
+        - main
 
 jobs:
   build:
@@ -58,9 +58,9 @@ jobs:
 
           find . -name ".DS_Store" -delete
 
-          mkdir $(date +"%Y-%m-%d")         
+          mkdir Mac_x86_$(date +"%Y-%m-%d")         
 
-          mv *.dmg $(date +"%Y-%m-%d") 
+          mv *.dmg Mac_x86_$(date +"%Y-%m-%d") 
 
           git config --global user.name cnmeeia
 
