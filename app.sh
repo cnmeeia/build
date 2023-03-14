@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/
 
 pake https://weekly.tw93.fun --icon .//icon/weekly.icns --name Weekly
 
