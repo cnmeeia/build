@@ -50,28 +50,21 @@ jobs:
 
           bash app.sh
 
-          mkdir x86 && mv *.dmg x86
+      - name: push
+        run: |
 
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          body: |
-            Automatically created.
-          draft: false
-          prerelease: false
+          find . -name ".DS_Store" -delete
 
-      - name: Upload Release Asset
-        id: upload-release-asset
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./x86/*.dmg
-          asset_name: pake_mac_x64_github_action_mick
-          asset_content_type: application/dmg
+          mkdir x86_$(date +"%Y-%m-%d")         
+
+          mv *.dmg x86_$(date +"%Y-%m-%d") 
+
+          git config --global user.name cnmeeia
+
+          git config --global user.emai ad.china0731+cnmeeiagithub@gmail.com
+
+          git add .
+
+          git commit -m "github action build mac app"
+
+          git push -f
