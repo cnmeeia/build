@@ -50,7 +50,7 @@ jobs:
 
           bash app.sh
 
-          mkdir x86 && mv *.dmg x86
+          mkdir arm && mv *.dmg arm
 
       - name: Create Release
         id: create_release
@@ -72,6 +72,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./x86/*.dmg
-          asset_name: mac x86
+          asset_path: ./arm/*.dmg
+          asset_name: mac arm
           asset_content_type: application/dmg
