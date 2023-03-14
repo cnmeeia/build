@@ -1,0 +1,73 @@
+name: Build App
+on: 
+  push:
+      branches:
+        - main
+
+jobs:
+  build:
+    name: build
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        build: [macos]
+        include:
+          - build: macos
+            os: macos-latest
+            rust: stable
+            target: aarch64-apple-darwin
+      fail-fast: false
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: install node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 18
+
+      - name: Install Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: ${{ matrix.rust }}
+          profile: minimal
+          override: true
+          target: ${{ matrix.target }}
+
+      - name: rust cache restore
+        uses: actions/cache/restore@v3
+        with:
+          path: |
+            ~/.cargo/bin/
+            ~/.cargo/registry/index/
+            ~/.cargo/registry/cache/
+            ~/.cargo/git/db/
+            src-tauri/target/
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+
+      - name: build App
+        run: |
+
+          npm install -g pake-cli
+
+          bash app.sh
+
+      - name: push
+        run: |
+
+          find . -name ".DS_Store" -delete
+
+          mkdir Mac_arm64_$(date +"%Y-%m-%d")         
+
+          mv *.dmg Mac_arm64_$(date +"%Y-%m-%d") 
+
+          git config --global user.name cnmeeia
+
+          git config --global user.emai ad.china0731+cnmeeiagithub@gmail.com
+
+          git add .
+
+          git commit -m "github action build mac app"
+
+          git push -f
