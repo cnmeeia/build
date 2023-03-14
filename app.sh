@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+
 pake https://weekly.tw93.fun --icon /icon/weekly.icns --name Weekly
 
 pake https://cloud.manito.plus/login --icon /icon/jd.icns --name 京东
