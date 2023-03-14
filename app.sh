@@ -1,42 +1,33 @@
 #!/usr/bin/env bash
 
+pake https://weekly.tw93.fun --icon .//icon/weekly.icns --name Weekly
 
-pake https://weekly.tw93.fun --icon /icon/weekly.icns --name Weekly
+pake https://cloud.digitalocean.com/ --icon .//icon/digi.icns --name Digitalocean
 
-pake https://cloud.manito.plus/login --icon /icon/jd.icns --name 京东
+pake https://weekly.tw93.fun --icon .//icon/weekly.icns --name 潮流周刊
 
-pake https://cloud.digitalocean.com/ --icon /icon/digi.icns --name Digitalocean
+pake https://tmp.link --icon .//icon/tmp.icns --name 钛盘
 
-pake https://weekly.tw93.fun --icon /icon/weekly.icns --name 潮流周刊
+pake https://www.youtube.com/ --icon .//icon/youtube.icns --name YouTube
 
-pake https://tmp.link --icon /icon/tmp.icns --name 钛盘
+pake https://www.icloud.com/ --icon .//icon/icloud.icns --name iCloud
 
-pake https://www.youtube.com/ --icon /icon/youtube.icns --name YouTube
+pake https://www.github.com/ --icon .//icon/github.icns --name GitHub
 
-pake https://www.icloud.com/ --icon /icon/icloud.icns --name iCloud
+pake https://www.cloudflare.com/zh-cn/ --icon .//icon/cloudflare.icns --name Clouflackre
 
-pake https://www.github.com/ --icon /icon/github.icns --name GitHub
+pake https://v2ex.com/ --icon .//icon/v2ex.icns --name V2ex
 
-pake https://www.cloudflare.com/zh-cn/ --icon /icon/cloudflare.icns --name Clouflackre
+pake https://www.notion.so/ --icon .//icon/notion.icns --name Notion
 
-pake https://v2ex.com/ --icon /icon/v2ex.icns --name V2ex
+pake https://www.instagram.com/ --icon .//icon/ins.icns --name instagram
 
-pake https://www.notion.so/ --icon /icon/notion.icns --name Notion
+pake https://www.appinn.com/ --icon .//icon/app.icns --name 小众软件
 
-pake https://www.instagram.com/ --icon /icon/ins.icns --name instagram
+pake https://portal.azure.com/ --icon .//icon/azure.icns --name Azure 
 
-pake https://web.okjike.com/login --icon /icon/jike.icns --name 即刻
+pake https://www.twitter.com --icon .//icon/twitter.icns --name Twitter
 
-pake https://www.appinn.com/ --icon /icon/app.icns --name 小众软件
+pake https://1024.day/ --icon .//icon/day.icns --name 1024
 
-pake https://portal.azure.com/ --icon /icon/azure.icns --name Azure 
-
-pake https://icon-icons.com/ --icon /icon/icons.icns --name 图标
-
-pake http://143.198.88.245/ --icon /icon/color.icns --name 中国色彩
-
-pake https://www.twitter.com --icon /icon/twitter.icns --name Twitter
-
-pake https://1024.day/ --icon /icon/day.icns --name 1024
-
-pake https://open-gpt.app/  --icon /icon/app.icns --name open 
+pake https://open-gpt.app/  --icon .//icon/app.icns --name open 
