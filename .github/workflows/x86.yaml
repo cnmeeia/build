@@ -73,5 +73,5 @@ jobs:
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./x86/*.dmg
-          asset_name: mac x86
+          asset_name: pake_mac_x64_github_action_mick
           asset_content_type: application/dmg
